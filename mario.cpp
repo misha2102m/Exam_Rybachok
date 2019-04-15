@@ -42,3 +42,20 @@ cout << "#";
 cout << endl;
 }
 }
+
+void buildPyramide(int height, int choice2)
+{
+for (int i = 0; i < height; i++)
+{
+for (int j = i; j < height - 1; j++)
+cout << " ";
+for (int j = 0; j <= i; j++)
+cout << "#";
+cout << " ";
+for (int j = 0; j <= i; j++)
+cout << "#";
+for (int j = i; j < height - 1; j++)
+cout << " ";
+cout << endl;
+}
+}
