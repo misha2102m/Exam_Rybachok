@@ -3,7 +3,7 @@
 using namespace std;
 void buildStairs(int height, int choice);
 void buildPyramide(int height, int choice2);
-
+//функції для пірамід
 int main()
 {
 int height, choice;
@@ -16,10 +16,13 @@ cout << "Enter height:";
 cout << "Choose 1 or 2 :";
 cin >> choice;
 cout << endl;
+//ввід висоти
+
 switch (choice)
 {
 case 1:
 buildStairs(height, choice);
+//1 піраміда(сходи)
 break;
 case 2:
 buildPyramide(height, choice);
@@ -27,6 +30,7 @@ break;
 default:
 cout << "Incorrect\n";
 break;
+//друга піраміда
 }
 system("pause");
 return 0;
@@ -42,6 +46,7 @@ cout << "#";
 cout << endl;
 }
 }
+//функція першої піраміди(сходів)
 
 void buildPyramide(int height, int choice2)
 {
@@ -59,3 +64,4 @@ cout << " ";
 cout << endl;
 }
 }
+//функція другої піраміди
