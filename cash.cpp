@@ -5,6 +5,9 @@ void coins(double grn);
 
 int main()
 {
+	double grn;
+	grn = corgrn();
+	coins(grn);
 
 	system("pause");
 	return 0;
