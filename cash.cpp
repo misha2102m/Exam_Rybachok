@@ -2,33 +2,13 @@
 using namespace std;
 double corgrn();
 void coins(double grn);
-
 int main()
 {
 	double grn;
 	grn = corgrn();
 	coins(grn);
-
 	system("pause");
 	return 0;
-}
-double corgrn()
-{
-	double grn;
-	cout << "Enter correct grn ( >= 0 , !=abc)";
-	do
-	{
-		cin >> grn;
-		if ((grn >= 'a' && grn <= 'z') || (grn >= 'A' && grn <= 'Z') || grn <= 0)
-		{
-			cout << "Error!\n";
-			return 0;
-		}
-
-		else if (grn >= 0)
-			break;
-	} while (true);
-	return grn;
 }
 void coins(double grn)
 {
@@ -58,11 +38,6 @@ void coins(double grn)
 
 	temp = amount5 * 5;
 	temp3 += temp;
-	coinsall = coinsall - temp;
-	amount2 = coinsall / 2;
-	cout << "n2 = " << amount2 << endl;
-	temp = amount2 * 2;
-	temp3 += temp;
 
 	coinsall = temp2 - temp3;
 	while (true)
@@ -81,3 +56,24 @@ void coins(double grn)
 	return;
 }
 
+double corgrn()
+{
+	double grn;
+	cout << "Enter correct grn ( >= 0 , !=abc) ";
+	while (true)
+	{
+		cin >> grn;
+		if (!cin || grn <= 0)
+		{
+			cin.clear();
+			cout << "Incorect input\n";
+			while (cin.get() != '\n')
+			{
+				continue;
+			}
+			continue;
+		}
+		break;
+	}
+	return grn;
+}
